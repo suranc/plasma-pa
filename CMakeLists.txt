@@ -36,6 +36,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     GlobalAccel
     I18n
     Plasma
+    PulseAudioQt
 )
 find_package(PulseAudio 5.0.0 REQUIRED)
 find_package(Canberra REQUIRED)

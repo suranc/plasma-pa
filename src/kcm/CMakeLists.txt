@@ -17,6 +17,7 @@ target_link_libraries(kcm_pulseaudio
     KF5::Declarative
     KF5::I18n
     KF5::QuickAddons
+    KF5::PulseAudioQt
     ${PULSEAUDIO_LIBRARY}
     ${PULSEAUDIO_MAINLOOP_LIBRARY}
 )
