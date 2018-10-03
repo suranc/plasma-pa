@@ -29,6 +29,7 @@ Item {
     property alias cfg_volumeStep: volumeStep.value
     property alias cfg_volumeFeedback: volumeFeedback.checked
     property alias cfg_outputChangeOsd: outputChangeOsd.checked
+    property alias cfg_mouseWheelVolumeControl: mouseWheelVolumeControl.checked
 
     ColumnLayout {
         Layout.fillWidth: true
@@ -85,6 +86,11 @@ Item {
                 CheckBox {
                     id: outputChangeOsd
                     text: i18n("Visual feedback when default output device changes")
+                }
+
+                CheckBox {
+                    id: mouseWheelVolumeControl
+                    text: i18n("Mouse wheel controls volume")
                 }
             }
         }

@@ -215,17 +215,19 @@ Item {
                 }
             }
             onWheel: {
-                var delta = wheel.angleDelta.y || wheel.angleDelta.x;
-                wheelDelta += delta;
-                // Magic number 120 for common "one click"
-                // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-                while (wheelDelta >= 120) {
-                    wheelDelta -= 120;
-                    increaseVolume();
-                }
-                while (wheelDelta <= -120) {
-                    wheelDelta += 120;
-                    decreaseVolume();
+                if (mouseWheelVolumeControl) {
+                    var delta = wheel.angleDelta.y || wheel.angleDelta.x;
+                    wheelDelta += delta;
+                    // Magic number 120 for common "one click"
+                    // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+                    while (wheelDelta >= 120) {
+                        wheelDelta -= 120;
+                        increaseVolume();
+                    }
+                    while (wheelDelta <= -120) {
+                        wheelDelta += 120;
+                        decreaseVolume();
+                    }
                 }
             }
         }
